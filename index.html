@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="GET" action="">
+    <form method="GET" action="http://arquivo.devmedia.com.br/projeto/requisicao.php">
         <fieldset>
             <legend> Conta </legend>
             <div>
                 <label> Email: </label>
-                <input type="email" />
+                <input type="email" required minlength="5" maxlength="250"/>
             </div>
             
             <div>
@@ -24,12 +24,12 @@
             <legend> Dados </legend>
             <div>
                 <label> Nome: </label>
-                <input type="text" placeholder="Ex: Laura" />
+                <input type="text" placeholder="Ex: Laura" name="nome" required />
             </div>
     
             <div>
                 <label> Telefone: </label>
-                <input type="text" placeholder="Ex: (99) 9999-9999" />
+                <input type="text" placeholder="Ex: (99) 9999-9999"  name="tel" />
             </div>
     
             <div>
@@ -42,12 +42,12 @@
     
             <div>
                 <label> Data de nascimento: </label>
-                <input type="date" />
+                <input type="date" name="data"/>
             </div>
     
             <div>
                 <label> Foto de perfil: </label>
-                <input type="file" accept="image/*" />
+                <input type="file" accept="image/*" name="image" />
             </div>
         </fieldset>
         
@@ -56,27 +56,27 @@
             <legend> Endereço </legend>
             <div>
                 <label> Rua: </label>
-                <input type="text" />
+                <input type="text" name="rua" required/>
             </div>
     
             <div>
                 <label> Complemento: </label>
-                <input type="text" />
+                <input type="text" name="complemento" />
             </div>
     
             <div>
                 <label> Número: </label>
-                <input type="number" min="1" max="9999" />
+                <input type="number" min="1" max="9999" name="numero" />
             </div>
     
             <div>
                 <label> Cidade: </label>
-                <input type="text" />
+                <input type="text" name="cidade" required/>
             </div>
     
             <div>
                 <label> Estado: </label>
-                <select> 
+                <select name="endereco_estado"> 
                     <option value="RJ"> Rio de Janeiro </option>
                     <option value="SP"> São Paulo </option>
                 </select>
@@ -87,15 +87,19 @@
             <legend> Anúncio</legend>
             <div>
                 <label> Como conheceu o Hello Pizza? </label>
-                <textarea maxlength="256" placeholder="Como para gente como você conheceu o nosso estabelecimento"></textarea>
+                <textarea name="como_conheceu_o_site" maxlength="256" placeholder="Como para gente como você conheceu o nosso estabelecimento"></textarea>
             </div>
     
             
             <div>
-                <input type="checkbox" checked/>
+                <input type="checkbox" name="receber_anuncio" checked/>
                 <label> Deseja receber ofertas por e-mail? </label>
             </div>
         </fieldset>
+
+        <!--<button type="submit">Enviar </button> -->
+        
+        <input  type="submit" value="enviar"/>
         
     </form>
 </body>

@@ -7,71 +7,96 @@
 </head>
 <body>
     <form method="GET" action="">
-        <div>
-            <label> Email: </label>
-            <input type="email" />
-        </div>
+        <fieldset>
+            <legend> Conta </legend>
+            <div>
+                <label> Email: </label>
+                <input type="email" />
+            </div>
+            
+            <div>
+                <label> Senha: </label>
+                <input type="password" />
+            </div>
+        </fieldset>
         
-        <div>
-            <label> Senha: </label>
-            <input type="password" />
-        </div>
+        <fieldset>
+            <legend> Dados </legend>
+            <div>
+                <label> Nome: </label>
+                <input type="text" placeholder="Ex: Laura" />
+            </div>
+    
+            <div>
+                <label> Telefone: </label>
+                <input type="text" placeholder="Ex: (99) 9999-9999" />
+            </div>
+    
+            <div>
+                <label> Sexo: </label>
+                <input type="radio" value="masculino" name="sexo" checked/>
+                <label> Masculino</label>
+                <input type="radio" value="feminino" name="sexo"/>
+                <label> Feminino</label>
+            </div>
+    
+            <div>
+                <label> Data de nascimento: </label>
+                <input type="date" />
+            </div>
+    
+            <div>
+                <label> Foto de perfil: </label>
+                <input type="file" accept="image/*" />
+            </div>
+        </fieldset>
         
-        <div>
-            <label> Nome: </label>
-            <input type="text" placeholder="Ex: Laura" />
-        </div>
-
-        <div>
-            <label> Telefone: </label>
-            <input type="text" placeholder="Ex: (99) 9999-9999" />
-        </div>
-
-        <div>
-            <label> Sexo: </label>
-            <input type="radio" value="masculino" name="sexo" checked/>
-            <label> Masculino</label>
-            <input type="radio" value="feminino" name="sexo"/>
-            <label> Feminino</label>
-        </div>
-
-        <div>
-            <label> Data de nascimento: </label>
-            <input type="date" />
-        </div>
-
-        <div>
-            <label> Rua: </label>
-            <input type="text" />
-        </div>
-
-        <div>
-            <label> Complemento: </label>
-            <input type="text" />
-        </div>
-
-        <div>
-            <label> Número: </label>
-            <input type="number" min="1" max="9999" />
-        </div>
-
-        <div>
-            <label> Cidade: </label>
-            <input type="text" />
-        </div>
-
-        <div>
-            <label> Estado: </label>
-            <select> 
-                <option value="RJ"> Rio de Janeiro </option>
-                <option value="SP"> São Paulo </option>
-            </select>
-        </div>
-
-        <div>
-            <label> Como conheceu o Hello Pizza? </label>
-            <textarea maxlength="256" placeholder="Como para gente como você conheceu o nosso estabelecimento"></textarea>
-        </div>
+       
+        <fieldset>
+            <legend> Endereço </legend>
+            <div>
+                <label> Rua: </label>
+                <input type="text" />
+            </div>
+    
+            <div>
+                <label> Complemento: </label>
+                <input type="text" />
+            </div>
+    
+            <div>
+                <label> Número: </label>
+                <input type="number" min="1" max="9999" />
+            </div>
+    
+            <div>
+                <label> Cidade: </label>
+                <input type="text" />
+            </div>
+    
+            <div>
+                <label> Estado: </label>
+                <select> 
+                    <option value="RJ"> Rio de Janeiro </option>
+                    <option value="SP"> São Paulo </option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend> Anúncio</legend>
+            <div>
+                <label> Como conheceu o Hello Pizza? </label>
+                <textarea maxlength="256" placeholder="Como para gente como você conheceu o nosso estabelecimento"></textarea>
+            </div>
+    
+            
+            <div>
+                <input type="checkbox" checked/>
+                <label> Deseja receber ofertas por e-mail? </label>
+            </div>
+        </fieldset>
+        
     </form>
 </body>
 </html>
